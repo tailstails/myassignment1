@@ -16,5 +16,15 @@ namespace _200424274A1
         {
             InitializeComponent();
         }
+
+        private void calcbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
