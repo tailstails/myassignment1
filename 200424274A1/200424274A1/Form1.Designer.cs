@@ -1,6 +1,6 @@
 ﻿namespace _200424274A1
 {
-    partial class Form1
+    partial class ChangeCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -211,7 +211,7 @@
             this.total.TabIndex = 18;
             this.total.Text = "Total";
             // 
-            // Form1
+            // ChangeCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,8 +235,8 @@
             this.Controls.Add(this.paid);
             this.Controls.Add(this.total);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ChangeCalculator";
+            this.Text = "Change Calculator ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

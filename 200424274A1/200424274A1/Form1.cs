@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _200424274A1
 {
-    public partial class Form1 : Form
+    public partial class ChangeCalculator : Form
     {
-        public Form1()
+        public ChangeCalculator()
         {
             InitializeComponent();
         }
@@ -35,15 +35,38 @@ namespace _200424274A1
 
             int nickles = 0;
 
+            //checks to see if the text boxes for the total and paid are blank
+            if(String.IsNullOrWhiteSpace (textBox1.Text) || String.IsNullOrWhiteSpace(paidBox.Text)) {
+
+                MessageBox.Show("This text cannot be empty. Please input numbers");
+                return;
+            }
+
+            //checks to see if the textboxes for the total and paid contain letters
+            if(Double.TryParse(textBox1.Text, out total) == false || Double.TryParse(paidBox.Text, out paid) == false)
+            {
+                MessageBox.Show("Please input proper numbers. Text is not allowed");
+                return;  
+            }
+
+            //checks to see if the total is greater than the paid amount
+            if(Double.Parse(textBox1.Text) > Double.Parse(paidBox.Text))
+            {
+                MessageBox.Show("The total must be less than the amount you paid.");
+                return;
+            }
+
+
+
 
             //total is stored in this textbox
-            total = double.Parse(textBox1.Text);
+                total = double.Parse(textBox1.Text);
 
             //paid is stored in this textbox
             paid = double.Parse(paidBox.Text);
 
             //change box holds the diffrence of paid and total
-            changeBox.Text = (paid - total).ToString();
+            changeBox.Text = "$" + (paid - total).ToString();
             double change = (paid - total) * 100; 
 
             //to find the toonies, divide change by 200 and get the remainder
