@@ -52,7 +52,7 @@ namespace _200424274A1
             //checks to see if the total is greater than the paid amount
             if(Double.Parse(textBox1.Text) > Double.Parse(paidBox.Text))
             {
-                MessageBox.Show("The total must be less than the amount you paid.");
+                MessageBox.Show("You have to pay " + (Double.Parse(textBox1.Text) - Double.Parse(paidBox.Text)) + " more dollars");
                 return;
             }
 
