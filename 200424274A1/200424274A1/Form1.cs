@@ -19,12 +19,38 @@ namespace _200424274A1
 
         private void calcbutton_Click(object sender, EventArgs e)
         {
+            double total = 0;
 
+            double paid = 0;
+
+            int toonie = 0;
+
+            int loonie = 0;
+
+            int quarters = 0;
+
+            int dimes = 0;
+
+            int nickles = 0;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
 
+            paidBox.Text = "";
+
+            changeBox.Text = "";
+
+            tooniesBox.Text = "";
+
+            looniesBox.Text = "";
+
+            quartersBox.Text = "";
+
+            dimesBox.Text = "";
+
+            nickelsBox.Text = "";
         }
     }
 }
